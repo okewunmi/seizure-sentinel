@@ -41,6 +41,7 @@ st.markdown("""
     .metric-card {
         background: #f0f2f6;
         padding: 1rem;
+           color: #1f77b4;
         border-radius: 0.5rem;
         border-left: 4px solid #1f77b4;
     }
@@ -418,11 +419,10 @@ with tab4:
         
         st.subheader("👨‍💻 Developer")
         st.markdown("""
-        **Your Name**  
+        **Okewunmi  AbdulAfe**
         Neural Bridge Project  
-        [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
-        
-        Built for Emotiv Systems internship application
+        [GitHub](https://github.com/okewunmi) | [LinkedIn](https://linkedin.com/in/okewunmi)       
+        # Built for Emotiv Systems internship application
         """)
 
 # Footer
