@@ -107,9 +107,9 @@ with st.sidebar:
     # Start/Stop buttons
     col1, col2 = st.columns(2)
     with col1:
-        start_btn = st.button("▶️ Start", use_container_width=True)
+        start_btn = st.button("▶️ Start", width='stretch')
     with col2:
-        stop_btn = st.button("⏹️ Stop", use_container_width=True)
+        stop_btn = st.button("⏹️ Stop", width='stretch')
 
 # Main content
 tab1, tab2, tab3, tab4 = st.tabs(["📊 Live Monitor", "📈 Analytics", "🏥 Patient Info", "ℹ️ About"])
@@ -199,7 +199,7 @@ with tab2:
             yaxis_title="Actual",
             height=400
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
         
     with col2:
         st.subheader("Clinical Metrics")
@@ -230,7 +230,7 @@ with tab2:
             barmode='group',
             height=400
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     
     # ROC Curve
     st.subheader("📈 ROC Curves")
@@ -263,7 +263,7 @@ with tab2:
             yaxis_title="True Positive Rate",
             height=400
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     
     with col2:
         # Detection statistics
@@ -337,7 +337,7 @@ with tab3:
             yaxis_title="Number of Seizures",
             height=300
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
         
         # Treatment timeline
         st.subheader("💊 Treatment Timeline")
@@ -351,7 +351,7 @@ with tab3:
             ],
             'Seizure Frequency': [8, 6, 4, 2]
         })
-        st.dataframe(treatment_data, use_container_width=True)
+        st.dataframe(treatment_data, width='stretch')
 
 with tab4:
     st.header("ℹ️ About Seizure Sentinel")
@@ -462,7 +462,7 @@ if start_btn or 'running' in st.session_state:
     fig.update_layout(height=800, showlegend=False, title_text="Live EEG Channels")
     fig.update_xaxes(title_text="Time (seconds)", row=show_channels, col=1)
     
-    eeg_plot_placeholder.plotly_chart(fig, use_container_width=True)
+    eeg_plot_placeholder.plotly_chart(fig, width='stretch')
     
     # Prediction confidence
     prediction_data = pd.DataFrame({
@@ -481,7 +481,7 @@ if start_btn or 'running' in st.session_state:
                              name='Seizure', fill='tozeroy', line=dict(color='red')))
     fig.update_layout(height=300, title="Prediction Confidence")
     
-    timeline_placeholder.plotly_chart(fig, use_container_width=True)
+    timeline_placeholder.plotly_chart(fig, width='stretch')
 
 if stop_btn:
     st.session_state.running = False
