@@ -1,0 +1,16 @@
+{
+  "window_size": 5.0,
+  "pre_ictal_window": 5.0,
+  "hidden_dim": 128,
+  "lstm_layers": 2,
+  "dropout": 0.5,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 32,
+  "n_epochs": 50,
+  "early_stopping_patience": 10,
+  "use_focal_loss": true,
+  "num_workers": 0,
+   "save_dir": "models/training_20250112"
+}
+
